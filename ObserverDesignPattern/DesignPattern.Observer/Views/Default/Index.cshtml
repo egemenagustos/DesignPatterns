@@ -1,0 +1,27 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <br />
+<form method="post">
+    <label>Adınız :</label>
+    <input type="text" class="form-control" asp-for="NameSurname" />
+    <br />
+
+    <label>Mailiniz :</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <br />
+
+
+    <label>Kullanıcı Adınız :</label>
+    <input type="text" class="form-control" asp-for="UserName" />
+    <br />
+
+    <label>Şifreniz :</label>
+    <input type="password" class="form-control" asp-for="Password" />
+    <br />
+    <button class="btn btn-outline-secondary">Kaydet</button>
+</form>
+</div>
+

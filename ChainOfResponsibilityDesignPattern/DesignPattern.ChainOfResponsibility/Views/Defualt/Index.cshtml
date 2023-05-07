@@ -1,0 +1,21 @@
+﻿@model CustomerProcessViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <form method="post">
+        <label>Müşteri adı soyadı:</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Çekilecek miktar:</label>
+        <input type="text" class="form-control" asp-for="Amount" />
+        <br />
+        <button type="submit" class="btn btn-success">Para Çek</button>
+    </form>
+</div>
+
+

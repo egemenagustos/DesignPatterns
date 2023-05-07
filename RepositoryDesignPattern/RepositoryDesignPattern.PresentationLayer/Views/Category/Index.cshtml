@@ -1,0 +1,29 @@
+﻿@model List<DesignPattern.EntityLayer.Concrete.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach(var categories in Model)
+        {
+            <tr>
+                <td>@categories.Id</td>
+                <td>@categories.Name</td>
+                <td><a href="/Category/DeleteCategory/@categories.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Category/UpdateCategory/@categories.Id" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Category/AddCategory/" class="btn btn-success">Ekle</a>
+</div>
+

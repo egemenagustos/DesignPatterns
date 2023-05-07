@@ -1,0 +1,17 @@
+﻿@model DesignPattern.EntityLayer.Concrete.Category
+
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<div class="container">
+    <br />
+
+    <form method="post">
+        <label>Kategori Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <button class="btn btn-success" type="submit">Ekle</button>
+    </form>
+</div>
+

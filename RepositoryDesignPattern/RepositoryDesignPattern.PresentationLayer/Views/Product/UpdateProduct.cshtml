@@ -1,0 +1,27 @@
+﻿@model DesignPattern.EntityLayer.Concrete.Product
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+}
+
+<div class="container">
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="Id"/>
+        <label>Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Stok</label>
+        <input type="text" asp-for="Stock" class="form-control" />
+        <br />
+        <label>Fiyat</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+        <label>Kategorisi</label>
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.Category, new{@class = "form-control"})
+        <br />
+        <button class="btn btn-success" type="submit">Güncelle</button>
+    </form>
+</div>
+

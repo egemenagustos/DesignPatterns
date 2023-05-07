@@ -1,0 +1,29 @@
+﻿@model DesignPattern.CQRS.CQRSPattern.Commands.CreateProductCommand
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="container">
+    <br />
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+
+        <label>Ürün Stok</label>
+        <input type="text" asp-for="Stock" class="form-control" />
+        <br />
+
+        <label>Ürün Fiyat</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+
+        <label>Ürün Açıklama</label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <br />
+
+        <button class="btn btn-success" type="submit">Ekle</button>
+    </form>
+</div>
+

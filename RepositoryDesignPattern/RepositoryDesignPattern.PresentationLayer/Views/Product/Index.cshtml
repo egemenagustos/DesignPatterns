@@ -1,0 +1,32 @@
+﻿@model List<DesignPattern.EntityLayer.Concrete.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Adı</th>
+            <th>Stok</th>
+            <th>Kategori</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var products in Model)
+        {
+            <tr>
+                <td>@products.Id</td>
+                <td>@products.Name</td>
+                <td>@products.Stock</td>
+                <td>@products.Category.Name</td>
+                <td><a href="/Product/UpdateProduct/@products.Id" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Product/DeleteProduct/@products.Id" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Product/AddProduct/" class="btn btn-success">Ekle</a>
+</div>
+
+

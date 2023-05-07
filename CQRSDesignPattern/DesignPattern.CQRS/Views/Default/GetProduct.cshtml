@@ -1,0 +1,25 @@
+﻿@model DesignPattern.CQRS.CQRSPattern.Results.GetProductByIdQueryResult
+
+@{
+    ViewData["Title"] = "GetProduct";
+}
+
+<div class="container">
+    <br />
+    <form method="get">
+        <input type="hidden" asp-for="Id"/>
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+
+        <label>Ürün Stok</label>
+        <input type="text" asp-for="Stock" class="form-control" />
+        <br />
+
+        <label>Ürün Fiyat</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+    </form>
+</div>
+
+
